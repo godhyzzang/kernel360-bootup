@@ -6,9 +6,10 @@ mac에 적응하느라 힘들었다...
 ## 어려웠던 점
     * queryselector, eventhandler, form submit에 대해 정확히 알아둬야겠다.
 ## 새롭게 알게된 점
-   dom application
+   * dom application
 ## 단계를 진행하며 느낀점
-    * 나머지 form완성해서 오늘까지 꼭 완성하기
+* 노션이 아닌 readme에 성실히 요약하면서 잘 활용하즈앗..
+    * 나머지 form완성해서 오늘까지 꼭 완성하잣...
 # 2. babel & webpack
 ## 수행 내용 
 * babek, webpack 수동 설정
