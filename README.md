@@ -1,9 +1,8 @@
-
-  0. mac에 적응하느라 힘들었다...
-  1. Dom manipulation
-     ###수행 내용
-    - div16개 random text,bg-color속성 구현
-    - form부분은 reset button만 구현
+mac에 적응하느라 힘들었다...
+# Dom manipulation
+## 수행 내용
+    * div16개 random text,bg-color속성 구현
+    * form부분은 reset button만 구현
     ◦ 어려웠던 점
     -  queryselector, eventhandler, form submit에 대해 정확히 알아둬야겠다.
     ◦ 새롭게 알게된 점
