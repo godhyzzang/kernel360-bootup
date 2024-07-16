@@ -1,9 +1,7 @@
 
-• 각 단계 별로 회고 내용을 각 폴더 내에 README.md파일에 아래 내용을 
-  포함하도록 작성
   0. mac에 적응하느라 힘들었다...
   1. Dom manipulation
-    ◦ 수행 내용
+     ###수행 내용
     - div16개 random text,bg-color속성 구현
     - form부분은 reset button만 구현
     ◦ 어려웠던 점
