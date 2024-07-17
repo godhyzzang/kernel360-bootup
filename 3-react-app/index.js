@@ -1,10 +1,14 @@
-import { createRoot } from 'react-dom/client';
+import './public/styles.css';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
 
-function NavigationBar() {
-  // TODO: Actually implement a navigation bar
-  return <h1>Hello from React!</h1>;
-}
+// ReactDOM.createRoot()를 사용하여 Root DOM node에 App 컴포넌트를 렌더링
+const rootElement = document.getElementById('root');
+const root = ReactDOM.createRoot(rootElement);
 
-const domNode = document.getElementById('navigation');
-const root = createRoot(domNode);
-root.render(<NavigationBar />);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);

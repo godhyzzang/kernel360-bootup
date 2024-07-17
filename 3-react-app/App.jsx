@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './styles.css';
+import './public/styles.css';
 import {
   clickSetBackgroundColor,
   clickSetTextStyle,
@@ -8,7 +8,7 @@ import {
   pickRandomColor,
   pickRandomFontStyle
 } from './scripts';
-//
+
 const App = () => {
   useEffect(() => {
     const container = document.querySelector('#container');
