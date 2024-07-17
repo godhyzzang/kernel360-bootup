@@ -8,7 +8,7 @@ import {
   pickRandomColor,
   pickRandomFontStyle
 } from './scripts';
-
+//
 const App = () => {
   useEffect(() => {
     const container = document.querySelector('#container');
