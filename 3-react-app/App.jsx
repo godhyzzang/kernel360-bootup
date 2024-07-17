@@ -1,40 +1,16 @@
 import React, { useEffect } from 'react';
 import './styles.css';
-
-const MAX_VALUE = 16;
-const COLOR_ARRAY = ["bg-red", "bg-blue", "bg-green"];
-const FONT_ARRAY = [
-  "text-bold",
-  "text-italic",
-  "text-strike",
-  "text-underline",
-];
-
-const shuffleArray = (array) => {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-};
-
-const pickRandomValue = (array) => {
-  return array[Math.floor(Math.random() * array.length)];
-};
-
-const pickRandomColor = () => {
-  return pickRandomValue(COLOR_ARRAY);
-};
-
-const pickRandomFontStyle = () => {
-  return pickRandomValue(FONT_ARRAY);
-};
+import {
+  clickSetBackgroundColor,
+  clickSetTextStyle,
+  clickReset,
+  shuffledArray,
+  pickRandomColor,
+  pickRandomFontStyle
+} from './scripts';
 
 const App = () => {
   useEffect(() => {
-    const initArray = Array.from({ length: MAX_VALUE }, (_, index) => index + 1);
-    const shuffledArray = shuffleArray(initArray);
-
     const container = document.querySelector('#container');
     shuffledArray.forEach((item) => {
       const div = document.createElement('div');
@@ -59,26 +35,26 @@ const App = () => {
             ID
             <input type="text" id="id-input" />
           </label>
-          <button id="set-color-button" value="bg-red">Set BG red</button>
-          <button id="set-color-button" value="bg-green">Set BG green</button>
-          <button id="set-color-button" value="bg-blue">Set BG blue</button>
+          <button onClick={clickSetBackgroundColor} value="bg-red">Set BG red</button>
+          <button onClick={clickSetBackgroundColor} value="bg-green">Set BG green</button>
+          <button onClick={clickSetBackgroundColor} value="bg-blue">Set BG blue</button>
         </div>
         <div className="input-section">
           <label htmlFor="className-input" className="input-label">
             Class
             <input type="text" id="className-input" />
           </label>
-          <button id="set-text-button" value="text-bold">Set text bold</button>
-          <button id="set-text-button" value="text-italic">Set text italic</button>
-          <button id="set-text-button" value="text-strike">Set text strike</button>
-          <button id="set-text-button" value="text-underline">Set text underline</button>
+          <button onClick={clickSetTextStyle} value="text-bold">Set text bold</button>
+          <button onClick={clickSetTextStyle} value="text-italic">Set text italic</button>
+          <button onClick={clickSetTextStyle} value="text-strike">Set text strike</button>
+          <button onClick={clickSetTextStyle} value="text-underline">Set text underline</button>
         </div>
         <div className="input-section">
           <label htmlFor="selector-input" className="input-label">
             Selector
             <input type="text" id="selector-input" />
           </label>
-          <button id="reset-button">Reset style</button>
+          <button onClick={clickReset}>Reset style</button>
         </div>
       </div>
     </>

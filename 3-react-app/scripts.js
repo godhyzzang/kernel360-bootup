@@ -1,24 +1,13 @@
-const MAX_VALUE = 16;
-const COLOR_ARRAY = ["bg-red", "bg-blue", "bg-green"];
-const FONT_ARRAY = [
+// scripts.js
+
+export const MAX_VALUE = 16;
+export const COLOR_ARRAY = ["bg-red", "bg-blue", "bg-green"];
+export const FONT_ARRAY = [
   "text-bold",
   "text-italic",
   "text-strike",
   "text-underline",
 ];
-
-const $container = document.querySelector("#container");
-
-const $setColorButton = document.querySelectorAll("#set-color-button");
-const $colorInput = document.querySelector("#id-input"); //컬러 input
-
-const $setTextButton = document.querySelectorAll("#set-text-button");
-const $classInput = document.querySelector("#class-input"); //텍스트 스타일 input
-
-const $resetButton = document.querySelector("#reset-button");
-const $selectorInput = document.querySelector("#selector-input"); //selector input
-
-const initArray = Array.from({ length: MAX_VALUE }, (_, index) => index + 1);
 
 const shuffleArray = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
@@ -40,25 +29,17 @@ const pickRandomFontStyle = () => {
   return pickRandomValue(FONT_ARRAY);
 };
 
-const shuffledArray = shuffleArray(initArray);
-
-shuffledArray.map((item) => {
-  const div = document.createElement("div");
-  div.id = "id-" + item;
-  div.className = `item ${pickRandomColor()} ${pickRandomFontStyle()}`;
-  div.innerHTML = item;
-  $container.appendChild(div);
-});
-
 export const clickSetBackgroundColor = (e) => {
   const target = e.target;
-  document.getElementById($colorInput.value).classList.remove(...COLOR_ARRAY);
-  document.getElementById($colorInput.value).classList.add(target.value);
+  const colorInputValue = document.getElementById('id-input').value;
+  document.getElementById(colorInputValue).classList.remove(...COLOR_ARRAY);
+  document.getElementById(colorInputValue).classList.add(target.value);
 };
 
 export const clickSetTextStyle = (e) => {
   const target = e.target;
-  const allNumber = document.getElementsByClassName($classInput.value);
+  const classInputValue = document.getElementById('className-input').value;
+  const allNumber = document.getElementsByClassName(classInputValue);
   Array.from(allNumber).forEach((item) => {
     item.classList.remove(...FONT_ARRAY);
     item.classList.add(target.value);
@@ -66,19 +47,14 @@ export const clickSetTextStyle = (e) => {
 };
 
 export const clickReset = () => {
-  const allSelector = document.querySelectorAll($selectorInput.value);
+  const selectorInputValue = document.getElementById('selector-input').value;
+  const allSelector = document.querySelectorAll(selectorInputValue);
   allSelector.forEach((item) => {
     item.classList.remove(...COLOR_ARRAY);
     item.classList.remove(...FONT_ARRAY);
   });
 };
 
-$setColorButton.forEach((button) => {
-  button.addEventListener("click", (e) => clickSetBackgroundColor(e));
-});
-
-$setTextButton.forEach((button) => {
-  button.addEventListener("click", (e) => clickSetTextStyle(e));
-});
-
-$resetButton.addEventListener("click", () => clickReset());
+export const initArray = Array.from({ length: MAX_VALUE }, (_, index) => index + 1);
+export const shuffledArray = shuffleArray(initArray);
+// export const MAX_VALUE, COLOR_ARRAY, FONT_ARRAY;
