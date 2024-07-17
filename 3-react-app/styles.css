@@ -1,0 +1,62 @@
+.container {
+  display: grid;
+  width: 80%;
+  grid-template-columns: repeat(4, auto);
+  gap: 18px;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border: 1px solid black;
+  font-size: 20px;
+  color: black;
+  background-color: lightgray;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+}
+.input-label {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.bg-red {
+  background-color: rgb(226, 68, 68);
+}
+
+.bg-green {
+  background-color: rgb(22, 152, 22);
+}
+
+.bg-blue {
+  background-color: rgb(54, 106, 227);
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-strike {
+  text-decoration: line-through;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
