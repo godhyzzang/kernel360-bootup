@@ -1,5 +1,5 @@
 mac에 적응하느라 힘들었다...
-# 1. Dom manipulation
+# 1. [1일차] DOM Manipulation
 ## 수행 내용
     * div16개 random text,bg-color속성 구현
     * form부분은 reset button만 구현
@@ -11,7 +11,8 @@ mac에 적응하느라 힘들었다...
 * queryselector, eventhandler, form submit에 대해 정확히 알아둬야겠다.
 * 노션이 아닌 readme에 성실히 요약하면서 잘 활용하즈앗..
     * 나머지 form완성해서 오늘까지 꼭 완성하잣...
-# 2. babel & webpack
+
+# 2. [1일차] Babel & Webpack
 ## 수행 내용 
 * babek, webpack 수동 설정
 ## 어려웠던 점
@@ -28,3 +29,14 @@ mac에 적응하느라 힘들었다...
 * 혼자 너무 오랜시간 서치만 하지 말고 멘토님께 바로 문의드리자..!
   
     
+# 3. [2일차] 리액트 개발 환경 처음부터 세팅해보기
+    <git 유념하기>
+    * 코드 수정하기 전에 git pull받아서 remote랑 
+## 수행 내용
+    * 
+## 어려웠던 점
+    * webpack -> package.json scripts? or webpack.config.js scripts?
+## 새롭게 알게된 점
+   * 
+## 단계를 진행하며 느낀점
+

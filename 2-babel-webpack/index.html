@@ -1,0 +1,51 @@
+<!-- .이 클래스 
+#이 아이디 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Kernel360 Web Dev Base</title>
+  </head>
+  <body>
+    <h1>Kernel360 Web Dev Base</h1>
+    <div id="container" class="container"></div>
+    <div id="input-container" class="input-container">
+      <div class="input-section">
+        <label for="id-input" class="input-label"
+          >ID
+          <input type="text" id="id-input" />
+        </label>
+        <button id="set-color-button" value="bg-red">Set BG red</button>
+        <button id="set-color-button" value="bg-green">Set BG green</button>
+        <button id="set-color-button" value="bg-blue">Set BG blue</button>
+      </div>
+      <div class="input-section">
+        <label for="class-input" class="input-label"
+          >Class
+          <input type="text" id="class-input" />
+        </label>
+        <button id="set-text-button" value="text-bold">Set text bold</button>
+        <button id="set-text-button" value="text-italic">
+          Set text italic
+        </button>
+        <button id="set-text-button" value="text-strike">
+          Set text strike
+        </button>
+        <button id="set-text-button" value="text-underline">
+          Set text text underline
+        </button>
+      </div>
+      <div class="input-section">
+        <label for="selector-input" class="input-label"
+          >Selector
+          <input type="text" id="selector-input" />
+        </label>
+        <button id="reset-button">Reset style</button>
+      </div>
+    </div>
+    <script src="dist/bundle.js"></script>
+  </body>
+</html>
