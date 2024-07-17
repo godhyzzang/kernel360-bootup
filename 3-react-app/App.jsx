@@ -23,10 +23,6 @@ const App = () => {
 
   return (
     <>
-      <p>This paragraph is a part of HTML.</p>
-      <nav id="navigation"></nav>
-      <p>This paragraph is also a part of HTML.</p>
-
       <h1>Kernel360 Web Dev Base</h1>
       <div id="container" className="container"></div>
       <div id="input-container" className="input-container">
