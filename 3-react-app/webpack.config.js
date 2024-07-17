@@ -3,7 +3,7 @@ const path = require("path");
 
 module.exports = {
   mode: "production",
-  entry: "./scripts.js",
+  entry: "./index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
@@ -26,15 +26,22 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(?:js|mjs|cjs)$/,
+        test: /\.(?:js|jsx|mjs|cjs)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
           options: {
-            presets: [["@babel/preset-env", { targets: "defaults" }]],
+            presets: [["@babel/preset-env", { targets: "defaults" }], "@babel/preset-react"],
           },
         },
       },
+      {
+        test: /\.css$/i, // css files
+        use: ["style-loader", "css-loader"],
+      },
     ],
   },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  }
 };

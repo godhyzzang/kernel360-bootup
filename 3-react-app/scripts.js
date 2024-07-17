@@ -9,7 +9,7 @@ export const FONT_ARRAY = [
   "text-underline",
 ];
 
-const shuffleArray = (array) => {
+export const shuffleArray = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
@@ -17,15 +17,15 @@ const shuffleArray = (array) => {
   return array;
 };
 
-const pickRandomValue = (array) => {
+export const pickRandomValue = (array) => {
   return array[Math.floor(Math.random() * array.length)];
 };
 
-const pickRandomColor = () => {
+export const pickRandomColor = () => {
   return pickRandomValue(COLOR_ARRAY);
 };
 
-const pickRandomFontStyle = () => {
+export const pickRandomFontStyle = () => {
   return pickRandomValue(FONT_ARRAY);
 };
 
