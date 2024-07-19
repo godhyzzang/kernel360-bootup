@@ -7,7 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    library: "lib",
+    library: "lib", //export하여 libarary로 사용가능
   },
   plugins: [new HtmlWebpackPlugin({
     filename: 'index.html',

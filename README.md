@@ -2,8 +2,10 @@
 # kernel 360 boot-up : 웹 환경 직접 설정해보기
 ## 1. DOM Manipulation
 ### 수행 내용
-* div16개 random text,bg-color속성 구현
-* form부분은 reset button만 구현
+* 페이지를 새로고침하면 <div>박스 16개의 배경색, 폰트 종류가 랜덤으로 변하게 만듦
+- 3개의 버튼 (배경색 바꾸는 버튼, 폰트 종류 바꾸는 버튼, 모든 요소 reset하는 버튼) 의 개별 input에 `selector` (`id`,`className`)를 입력하면 그 selector를 가지는 **요소들의 각 속성을 바꿔주는 기능**을 구현
+    - DOM함수 `queryselector`, `eventhandler`
+
 ### 어려웠던 점
 * form 요소, handler에 대해 애매하게 알고있어서 더 해매기 시작한 것 같다
 ### 새롭게 알게된 점
@@ -43,8 +45,9 @@
 ### 어려웠던 점
 * webpack -> package.json scripts? or webpack.config.js scripts?
 ### 새롭게 알게된 점
-   * webpack.config.js설정과정
-    * (entry, plugin의 filename 등) 과정에서 공식문서를 앍고 정확한 답을 찾아내는 것이 쉽지 않았다. 
+* babel, webpack이 있어야 ???이 된다 
+* webpack.config.js설정과정
+* (entry, plugin의 filename 등) 과정에서 공식문서를 앍고 정확한 답을 찾아내는 것이 쉽지 않았다. 
 ### 단계를 진행하며 느낀점
 - scripts.js, index.js, index.html 등의 역할을 분명히 알아야겠다.
 
@@ -58,12 +61,14 @@
 - "start": "webpack serve --mode development --port 3000"
 6. CSS loader 연동하여 style.css연결
 ### 어려웠던 점
-* webpack.config.js설정과정
+* webpack.con" fig.js설정과정
     * (entry, plugin의 filename 등) 과정에서 공식문서를 앍고 정확한 답을 찾아내는 것이 쉽지 않았다.  
 ### 새롭게 알게된 점
+* html, css , js등 하나로 합쳐서 -> single page application
 > 에러 핸들링 팁
 - 터미널 확인 -> 브라우저 console 확인
 - 익숙지 않은 에러도 이해하려고 노력하면 그 안에 원인이 녹아있다 
+- 오류 정말 못 찾겠으면 한줄마다 console.log()찍어보면 된다 (like 청진기)
 ### 단계를 진행하며 느낀점
 * 오늘 직접 세팅한 환경과 cra 환경을 비교해보고 복습해보자.
 
